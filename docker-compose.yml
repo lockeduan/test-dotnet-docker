@@ -1,0 +1,17 @@
+﻿version: '3.3'
+
+services:
+    test-dotnet-docker:
+        build: ./TestDotNetDocker
+        restart: always
+        networks:
+            - backend_service
+        environment:
+            - env=production
+        ports:
+            - "9000:80"
+
+networks: 
+    backend_service:
+        external:
+            name: xindots_br
