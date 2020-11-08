@@ -31,9 +31,11 @@ ENTRYPOINT ["dotnet", "TestDotNetDocker.dll"]
 ```
 
 # How to run
+```
 docker build -t test-dotnet-docker .
 docker run -p 5001:80  -e env=prodution test-dotnet-docker
+```
 
 Or
 
-docker-compose up
+`docker-compose up`
